@@ -25,7 +25,7 @@ export interface Quiz {
   description?: string;
   questions: Question[];
   passingScore?: number;
-  timeLimit?: number; // in minutes
+  timeLimit?: number;
 }
 
 export interface Questionnaire {
@@ -75,142 +75,41 @@ export const modules: ModuleData[] = [
       {
         id: "m1-c1",
         title: "Introduction to Software Quality",
-        content:
-          "Understanding the uniqueness of software quality assurance, environments for which SQA methods are developed, and fundamental definitions of software quality and software itself.",
+        content: "Understanding the uniqueness of software quality assurance, environments for which SQA methods are developed, and fundamental definitions of software quality and software itself.",
         order: 1,
         materials: [
-          {
-            id: "m1-c1-m1",
-            title: "Software Quality Fundamentals",
-            type: "PDF",
-            url: "/uploads/software-quality-fundamentals.pdf",
-            description: "Introduction to software quality concepts and definitions"
-          },
-          {
-            id: "m1-c1-m2",
-            title: "SQA Environments",
-            type: "PDF",
-            url: "/uploads/sqa-environments.pdf",
-            description: "Environments for which SQA methods are developed"
-          }
-        ],
-        quiz: {
-          id: "m1-q1",
-          title: "Software Quality Basics Quiz",
-          description: "Test your understanding of fundamental software quality concepts",
-          passingScore: 70,
-          questions: [
-            {
-              id: "m1-q1-1",
-              text: "What makes software quality assurance unique?",
-              options: [
-                "Software is intangible and complex",
-                "Software development is linear",
-                "Software quality is easy to measure",
-                "Software doesn't require testing"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "Software quality assurance is unique because software is intangible, complex, and requires special approaches to ensure quality."
-            },
-            {
-              id: "m1-q1-2",
-              text: "Which of the following is a correct definition of software quality?",
-              options: [
-                "Meeting customer requirements and expectations",
-                "Having no bugs",
-                "Being expensive",
-                "Having many features"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "Software quality is defined by meeting customer requirements and expectations, not just the absence of bugs."
-            }
-          ]
-        }
+          { id: "m1-c1-m1", title: "Software Quality Fundamentals", type: "PDF", url: "/uploads/software-quality-fundamentals.pdf", description: "Introduction to software quality concepts and definitions" },
+          { id: "m1-c1-m2", title: "SQA Environments", type: "PDF", url: "/uploads/sqa-environments.pdf", description: "Environments for which SQA methods are developed" }
+        ]
       },
       {
         id: "m1-c2",
         title: "Software Errors, Faults, and Failures",
-        content:
-          "Understanding software errors, faults, and failures, along with classification of their causes and how they relate to software quality.",
+        content: "Understanding software errors, faults, and failures, along with classification of their causes and how they relate to software quality.",
         order: 2,
         materials: [
-          {
-            id: "m1-c2-m1",
-            title: "Error Classification",
-            type: "PDF",
-            url: "/uploads/error-classification.pdf",
-            description: "Classification of software errors, faults, and failures"
-          }
+          { id: "m1-c2-m1", title: "Error Classification", type: "PDF", url: "/uploads/error-classification.pdf", description: "Classification of software errors, faults, and failures" }
         ]
       },
       {
         id: "m1-c3",
         title: "Software Quality Definition and Objectives",
-        content:
-          "Comprehensive coverage of software quality definition, SQA definition and objectives, and SQA in relation to software engineering.",
+        content: "Comprehensive coverage of software quality definition, SQA definition and objectives, and SQA in relation to software engineering.",
         order: 3,
         materials: [
-          {
-            id: "m1-c3-m1",
-            title: "SQA Objectives",
-            type: "PDF",
-            url: "/uploads/sqa-objectives.pdf",
-            description: "Software Quality Assurance objectives and definitions"
-          }
+          { id: "m1-c3-m1", title: "SQA Objectives", type: "PDF", url: "/uploads/sqa-objectives.pdf", description: "Software Quality Assurance objectives and definitions" }
         ]
       },
       {
         id: "m1-c4",
         title: "Software Quality Factors",
-        content:
-          "The need for comprehensive software quality requirements, classifications of software requirements into software quality factors including product operation, product revision, and product transition factors. Alternative models and stakeholders in quality requirements.",
+        content: "The need for comprehensive software quality requirements, classifications of software requirements into software quality factors including product operation, product revision, and product transition factors.",
         order: 4,
         materials: [
-          {
-            id: "m1-c4-m1",
-            title: "Quality Factors Classification",
-            type: "PDF",
-            url: "/uploads/quality-factors.pdf",
-            description: "Classification of software quality factors"
-          },
-          {
-            id: "m1-c4-m2",
-            title: "Product Operation Factors",
-            type: "PDF",
-            url: "/uploads/product-operation-factors.pdf",
-            description: "Product operation software quality factors"
-          },
-          {
-            id: "m1-c4-m3",
-            title: "Product Revision and Transition Factors",
-            type: "PDF",
-            url: "/uploads/product-revision-transition.pdf",
-            description: "Product revision and transition software quality factors"
-          }
-        ],
-        quiz: {
-          id: "m1-q2",
-          title: "Software Quality Factors Quiz",
-          description: "Assess your knowledge of software quality factors",
-          passingScore: 70,
-          questions: [
-            {
-              id: "m1-q2-1",
-              text: "Which category includes reliability and usability?",
-              options: [
-                "Product operation factors",
-                "Product revision factors",
-                "Product transition factors",
-                "Management factors"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "Reliability and usability are part of product operation software quality factors."
-            }
-          ]
-        }
+          { id: "m1-c4-m1", title: "Quality Factors Classification", type: "PDF", url: "/uploads/quality-factors.pdf", description: "Classification of software quality factors" },
+          { id: "m1-c4-m2", title: "Product Operation Factors", type: "PDF", url: "/uploads/product-operation-factors.pdf", description: "Product operation software quality factors" },
+          { id: "m1-c4-m3", title: "Product Revision and Transition Factors", type: "PDF", url: "/uploads/product-revision-transition.pdf", description: "Product revision and transition software quality factors" }
+        ]
       }
     ]
   },
@@ -225,78 +124,30 @@ export const modules: ModuleData[] = [
       {
         id: "m2-c1",
         title: "SQA System Architecture",
-        content:
-          "Understanding the SQA system as an architecture, including pre-project components, software project life cycle components, and infrastructure components for error prevention and improvement.",
+        content: "Understanding the SQA system as an architecture, including pre-project components, software project life cycle components, and infrastructure components for error prevention and improvement.",
         order: 1,
         materials: [
-          {
-            id: "m2-c1-m1",
-            title: "SQA Architecture Overview",
-            type: "PDF",
-            url: "/uploads/sqa-architecture.pdf",
-            description: "Overview of SQA system architecture"
-          }
+          { id: "m2-c1-m1", title: "SQA Architecture Overview", type: "PDF", url: "/uploads/sqa-architecture.pdf", description: "Overview of SQA system architecture" }
         ]
       },
       {
         id: "m2-c2",
         title: "Management and Infrastructure Components",
-        content:
-          "Management SQA components, standards, system certification, and assessment components. Organizing for SQA including human components and considerations guiding the construction of an organization's SQA system.",
+        content: "Management SQA components, standards, system certification, and assessment components.",
         order: 2,
         materials: [
-          {
-            id: "m2-c2-m1",
-            title: "Management Components",
-            type: "PDF",
-            url: "/uploads/management-components.pdf",
-            description: "Management SQA components"
-          },
-          {
-            id: "m2-c2-m2",
-            title: "Infrastructure Components",
-            type: "PDF",
-            url: "/uploads/infrastructure-components.pdf",
-            description: "Infrastructure components for error prevention"
-          }
+          { id: "m2-c2-m1", title: "Management Components", type: "PDF", url: "/uploads/management-components.pdf", description: "Management SQA components" },
+          { id: "m2-c2-m2", title: "Infrastructure Components", type: "PDF", url: "/uploads/infrastructure-components.pdf", description: "Infrastructure components for error prevention" }
         ]
       },
       {
         id: "m2-c3",
         title: "Contract Review",
-        content:
-          "Introduction to contract review, the contract review process and its stages, contract review objectives, implementation of a contract review, contract review subjects, and contract reviews for internal projects.",
+        content: "Introduction to contract review, the contract review process and its stages...",
         order: 3,
         materials: [
-          {
-            id: "m2-c3-m1",
-            title: "Contract Review Process",
-            type: "PDF",
-            url: "/uploads/contract-review.pdf",
-            description: "Contract review process and implementation"
-          }
-        ],
-        quiz: {
-          id: "m2-q1",
-          title: "Contract Review Quiz",
-          description: "Test your understanding of contract review processes",
-          passingScore: 70,
-          questions: [
-            {
-              id: "m2-q1-1",
-              text: "What is the primary objective of contract review?",
-              options: [
-                "To ensure all requirements are clear and feasible",
-                "To increase project cost",
-                "To delay project start",
-                "To avoid documentation"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "Contract review ensures all requirements are clear, feasible, and well-understood before project start."
-            }
-          ]
-        }
+          { id: "m2-c3-m1", title: "Contract Review Process", type: "PDF", url: "/uploads/contract-review.pdf", description: "Contract review process and implementation" }
+        ]
       }
     ]
   },
@@ -311,98 +162,33 @@ export const modules: ModuleData[] = [
       {
         id: "m3-c1",
         title: "Software Development Methodologies",
-        content:
-          "Understanding classic and other software development methodologies, and factors affecting the intensity of quality assurance activities in the development process.",
+        content: "Understanding classic and other software development methodologies...",
         order: 1,
         materials: [
-          {
-            id: "m3-c1-m1",
-            title: "Development Methodologies",
-            type: "PDF",
-            url: "/uploads/development-methodologies.pdf",
-            description: "Classic and modern software development methodologies"
-          }
+          { id: "m3-c1-m1", title: "Development Methodologies", type: "PDF", url: "/uploads/development-methodologies.pdf", description: "Classic and modern software development methodologies" }
         ]
       },
       {
         id: "m3-c2",
         title: "Verification, Validation, and Qualification",
-        content:
-          "Understanding verification, validation, and qualification processes, and a model for SQA defect removal effectiveness and cost.",
+        content: "Understanding verification, validation, and qualification processes...",
         order: 2,
         materials: [
-          {
-            id: "m3-c2-m1",
-            title: "V&V Processes",
-            type: "PDF",
-            url: "/uploads/verification-validation.pdf",
-            description: "Verification, validation, and qualification processes"
-          }
+          { id: "m3-c2-m1", title: "V&V Processes", type: "PDF", url: "/uploads/verification-validation.pdf", description: "Verification, validation, and qualification processes" }
         ]
       },
       {
         id: "m3-c3",
         title: "Software Testing",
-        content:
-          "Software testing strategies, definition and objectives, software testing strategies, software test classifications, white box testing, black box testing, and CASE tools and their effect on software quality.",
+        content: "Software testing strategies, definition and objectives...",
         order: 3,
         materials: [
-          {
-            id: "m3-c3-m1",
-            title: "Testing Strategies",
-            type: "PDF",
-            url: "/uploads/testing-strategies.pdf",
-            description: "Software testing strategies and classifications"
-          },
-          {
-            id: "m3-c3-m2",
-            title: "White Box and Black Box Testing",
-            type: "PDF",
-            url: "/uploads/white-black-box-testing.pdf",
-            description: "White box and black box testing techniques"
-          },
-          {
-            id: "m3-c3-m3",
-            title: "CASE Tools",
-            type: "PDF",
-            url: "/uploads/case-tools.pdf",
-            description: "CASE tools and their effect on software quality"
-          }
-        ],
-        quiz: {
-          id: "m3-q1",
-          title: "Software Testing Quiz",
-          description: "Assess your knowledge of software testing strategies",
-          passingScore: 70,
-          questions: [
-            {
-              id: "m3-q1-1",
-              text: "What is the main difference between white box and black box testing?",
-              options: [
-                "White box tests internal structure, black box tests functionality",
-                "White box is faster than black box",
-                "Black box requires source code",
-                "There is no difference"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "White box testing examines internal code structure, while black box testing focuses on functionality without knowledge of internal structure."
-            },
-            {
-              id: "m3-q1-2",
-              text: "Which testing approach requires knowledge of the internal code structure?",
-              options: [
-                "White box testing",
-                "Black box testing",
-                "Integration testing",
-                "Acceptance testing"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "White box testing requires knowledge of the internal code structure to design test cases."
-            }
-          ]
-        }
+          { id: "m3-c3-m1", title: "Testing Strategies", type: "PDF", url: "/uploads/testing-strategies.pdf", description: "Software testing strategies and classifications" },
+          { id: "m3-c3-m2", title: "White Box and Black Box Testing", type: "PDF", url: "/uploads/white-black-box-testing.pdf", description: "White box and black box testing techniques" },
+          { id: "m3-c3-m3", title: "CASE Tools", type: "PDF", url: "/uploads/case-tools.pdf", description: "CASE tools and their effect on software quality" },
+          // Student Submission
+          { id: "m3-student-1", title: "SQA Components in Project Lifecycle", type: "LINK", url: "https://docs.google.com/document/d/1zJeGuvJJKk64iADZ6vR6L5XJVQplmQue/edit?usp=sharing", description: "Submitted by Eshwari S & team" }
+        ]
       }
     ]
   },
@@ -417,110 +203,31 @@ export const modules: ModuleData[] = [
       {
         id: "m4-c1",
         title: "Project Progress Control",
-        content:
-          "The components of project progress control, progress control of internal projects and external participants, implementation of project progress control regimes, and computerized tools for software progress control quality.",
+        content: "The components of project progress control, progress control of internal projects and external participants...",
         order: 1,
         materials: [
-          {
-            id: "m4-c1-m1",
-            title: "Progress Control Components",
-            type: "PDF",
-            url: "/uploads/progress-control.pdf",
-            description: "Components of project progress control"
-          },
-          {
-            id: "m4-c1-m2",
-            title: "Computerized Tools for Progress Control",
-            type: "PDF",
-            url: "/uploads/progress-control-tools.pdf",
-            description: "Computerized tools for software progress control"
-          }
-        ],
-        quiz: {
-          id: "m4-q1",
-          title: "Project Progress Control Quiz",
-          description: "Test your understanding of project progress control",
-          passingScore: 70,
-          questions: [
-            {
-              id: "m4-q1-1",
-              text: "What is the main purpose of project progress control?",
-              options: [
-                "To monitor and manage project progress",
-                "To increase project delays",
-                "To avoid documentation",
-                "To reduce team communication"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "Project progress control monitors and manages project progress to ensure timely delivery and quality."
-            }
-          ]
-        }
+          { id: "m4-c1-m1", title: "Progress Control Components", type: "PDF", url: "/uploads/progress-control.pdf", description: "Components of project progress control" },
+          { id: "m4-c1-m2", title: "Computerized Tools for Progress Control", type: "PDF", url: "/uploads/progress-control-tools.pdf", description: "Computerized tools for software progress control" },
+          // Student Submissions - Project Progress Control
+          { id: "m4-student-progress-1", title: "Chapter 20.3 - Implementation of Project Progress Control Regimes", type: "LINK", url: "https://drive.google.com/drive/folders/1ArJjWw_oK3OpYV3KhZFN6xuobFGfiZD9?usp=sharing", description: "Submitted by Syed Abdul Rauf & team" },
+          { id: "m4-student-progress-2", title: "Project Progress Control Full Materials (Ch 24.1-24.4, Ch 9.1-9.5, Ch 20.2)", type: "LINK", url: "https://drive.google.com/drive/folders/1ABJTaUy2mcBHWBzh2rgETIliQlpOoSr1?usp=sharing", description: "Submitted by Prajwal Reddy R & team" }
+        ]
       },
       {
         id: "m4-c2",
         title: "Software Quality Metrics",
-        content:
-          "Objectives of quality measurement, classification of software quality metrics (process metrics, product metrics), implementation of software quality metrics, and limitations of software metrics.",
+        content: "Objectives of quality measurement, classification of software quality metrics...",
         order: 2,
         materials: [
-          {
-            id: "m4-c2-m1",
-            title: "Quality Metrics Overview",
-            type: "PDF",
-            url: "/uploads/quality-metrics.pdf",
-            description: "Objectives and classification of software quality metrics"
-          },
-          {
-            id: "m4-c2-m2",
-            title: "Process and Product Metrics",
-            type: "PDF",
-            url: "/uploads/process-product-metrics.pdf",
-            description: "Process metrics and product metrics"
-          },
-          {
-            id: "m4-c2-m3",
-            title: "Metrics Implementation",
-            type: "PDF",
-            url: "/uploads/metrics-implementation.pdf",
-            description: "Implementation of software quality metrics"
-          }
-        ],
-        quiz: {
-          id: "m4-q2",
-          title: "Software Quality Metrics Quiz",
-          description: "Assess your knowledge of software quality metrics",
-          passingScore: 70,
-          questions: [
-            {
-              id: "m4-q2-1",
-              text: "Which type of metric measures development process characteristics?",
-              options: [
-                "Process metrics",
-                "Product metrics",
-                "Cost metrics",
-                "Time metrics"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "Process metrics measure characteristics of the software development process."
-            },
-            {
-              id: "m4-q2-2",
-              text: "Product metrics measure:",
-              options: [
-                "Characteristics of the software product",
-                "Development time",
-                "Team size",
-                "Budget allocation"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "Product metrics measure characteristics of the software product itself."
-            }
-          ]
-        }
+          { id: "m4-c2-m1", title: "Quality Metrics Overview", type: "PDF", url: "/uploads/quality-metrics.pdf", description: "Objectives and classification of software quality metrics" },
+          { id: "m4-c2-m2", title: "Process and Product Metrics", type: "PDF", url: "/uploads/process-product-metrics.pdf", description: "Process metrics and product metrics" },
+          { id: "m4-c2-m3", title: "Metrics Implementation", type: "PDF", url: "/uploads/metrics-implementation.pdf", description: "Implementation of software quality metrics" },
+          // Student Submissions - Software Quality Metrics
+          { id: "m4-student-metrics-1", title: "Software Quality Metrics - Entire Chapter", type: "LINK", url: "https://drive.google.com/drive/u/0/folders/1wl8JHo-deojCFWzFUynDOYaE3uvY4b9W", description: "Submitted by Palleboyina Deekshitha & team" },
+          { id: "m4-student-metrics-2", title: "Software Quality Metrics Study Materials", type: "LINK", url: "https://drive.google.com/file/d/1ZQQpHE5TgfK6baJiFAKbN28uAHK2I4bj/view?usp=sharing", description: "Submitted by Deepak Gowda M L" },
+          { id: "m4-student-metrics-3", title: "Software Quality Metrics", type: "LINK", url: "https://drive.google.com/file/d/1AG4bZqwO8m1izodnhPiZpARCjZVz_C77/view?usp=sharing", description: "Submitted by Cholaraju Bhuvan" },
+          { id: "m4-student-metrics-4", title: "Module 4 - Software Quality Metrics", type: "LINK", url: "https://docs.google.com/document/d/1FprAHP6pEzyeZDDgYalSpWeAy4MblQfMIpkYqhN0rmQ/edit?usp=drivesdk", description: "Submitted by Shweta Rama Marathi & team" }
+        ]
       }
     ]
   },
@@ -535,141 +242,45 @@ export const modules: ModuleData[] = [
       {
         id: "m5-c1",
         title: "Quality Management Standards",
-        content:
-          "Quality management standards, scope of quality management standards, ISO 9001 and ISO 9000-3, and certification according to ISO 9000-3.",
+        content: "Quality management standards, scope of quality management standards, ISO 9001 and ISO 9000-3...",
         order: 1,
         materials: [
-          {
-            id: "m5-c1-m1",
-            title: "ISO 9001 Overview",
-            type: "PDF",
-            url: "/uploads/iso-9001.pdf",
-            description: "ISO 9001 quality management standards"
-          },
-          {
-            id: "m5-c1-m2",
-            title: "ISO 9000-3 Certification",
-            type: "PDF",
-            url: "/uploads/iso-9000-3.pdf",
-            description: "ISO 9000-3 certification for software"
-          }
-        ],
-        quiz: {
-          id: "m5-q1",
-          title: "Quality Standards Quiz",
-          description: "Test your understanding of quality management standards",
-          passingScore: 70,
-          questions: [
-            {
-              id: "m5-q1-1",
-              text: "What does ISO 9001 primarily focus on?",
-              options: [
-                "Quality management systems",
-                "Software testing",
-                "Code review",
-                "Project scheduling"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "ISO 9001 focuses on quality management systems and processes."
-            }
-          ]
-        }
+          { id: "m5-c1-m1", title: "ISO 9001 Overview", type: "PDF", url: "/uploads/iso-9001.pdf", description: "ISO 9001 quality management standards" },
+          { id: "m5-c1-m2", title: "ISO 9000-3 Certification", type: "PDF", url: "/uploads/iso-9000-3.pdf", description: "ISO 9000-3 certification for software" },
+          // Student Submission
+          { id: "m5-student-iso", title: "Scope of Quality Management Standards", type: "LINK", url: "https://forms.gle/39sYUMqibGjPhUgM9", description: "Submitted by Amulya D & team" }
+        ]
       },
       {
         id: "m5-c2",
         title: "Capability Maturity Models",
-        content:
-          "Capability Maturity Models (CMM and CMMI), assessment methodology, The Bootstrap methodology, The SPICE project and the ISO/IEC 15504, and software process assessment standard.",
+        content: "Capability Maturity Models (CMM and CMMI), assessment methodology, The Bootstrap methodology, The SPICE project...",
         order: 2,
         materials: [
-          {
-            id: "m5-c2-m1",
-            title: "CMM and CMMI",
-            type: "PDF",
-            url: "/uploads/cmm-cmmi.pdf",
-            description: "Capability Maturity Models"
-          },
-          {
-            id: "m5-c2-m2",
-            title: "SPICE and ISO/IEC 15504",
-            type: "PDF",
-            url: "/uploads/spice-iso15504.pdf",
-            description: "SPICE project and ISO/IEC 15504"
-          }
-        ],
-        quiz: {
-          id: "m5-q2",
-          title: "CMM/CMMI Quiz",
-          description: "Assess your knowledge of Capability Maturity Models",
-          passingScore: 70,
-          questions: [
-            {
-              id: "m5-q2-1",
-              text: "What does CMMI stand for?",
-              options: [
-                "Capability Maturity Model Integration",
-                "Code Management Model Integration",
-                "Customer Management Model Integration",
-                "Cost Management Model Integration"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "CMMI stands for Capability Maturity Model Integration."
-            }
-          ]
-        }
+          { id: "m5-c2-m1", title: "CMM and CMMI", type: "PDF", url: "/uploads/cmm-cmmi.pdf", description: "Capability Maturity Models" },
+          { id: "m5-c2-m2", title: "SPICE and ISO/IEC 15504", type: "PDF", url: "/uploads/spice-iso15504.pdf", description: "SPICE project and ISO/IEC 15504" },
+          // Student Submissions - SPICE & CMMI
+          { id: "m5-student-spice-1", title: "SPICE Project", type: "LINK", url: "https://docs.google.com/document/d/1kBAlLm_8GjUXcNll8ds7KlnvmCP977gL/edit?usp=drivesdk", description: "Submitted by Student Group" },
+          { id: "m5-student-spice-2", title: "Spice Project & Certification", type: "LINK", url: "https://docs.google.com/document/d/19vAosoVThaiJ1sAWXB6Sv0TY6N4C7_WX/edit?usp=drivesdk", description: "Submitted by Vaishnavi Pooja S & team" },
+          { id: "m5-student-spice-3", title: "Spice, Certification, CMMI", type: "LINK", url: "https://docs.google.com/document/d/1wpGJ3mWkOBL-G7oCjBlR1Y_Uy0KqGIlG/edit?usp=drivesdk", description: "Submitted by Sangeetha K C & team" },
+          { id: "m5-student-cmm", title: "Capability Maturity Model", type: "LINK", url: "https://docs.google.com/presentation/d/18K1OWHbUUalR42u56ZMZX9x25c0r-QNG/edit?usp=sharing", description: "Submitted by Dhananjaya D" }
+        ]
       },
       {
         id: "m5-c3",
         title: "SQA Project Process Standards",
-        content:
-          "IEEE software engineering standards, structure and content of IEEE software engineering standards, IEEE/EIA Std 12207 – software life cycle processes, IEEE Std 1012 – verification and validation, and IEEE Std 1028 – reviews.",
+        content: "IEEE software engineering standards, structure and content of IEEE software engineering standards...",
         order: 3,
         materials: [
-          {
-            id: "m5-c3-m1",
-            title: "IEEE Standards Overview",
-            type: "PDF",
-            url: "/uploads/ieee-standards.pdf",
-            description: "IEEE software engineering standards"
-          },
-          {
-            id: "m5-c3-m2",
-            title: "IEEE Std 12207",
-            type: "PDF",
-            url: "/uploads/ieee-12207.pdf",
-            description: "IEEE/EIA Std 12207 – software life cycle processes"
-          },
-          {
-            id: "m5-c3-m3",
-            title: "IEEE Std 1012 and 1028",
-            type: "PDF",
-            url: "/uploads/ieee-1012-1028.pdf",
-            description: "IEEE Std 1012 – verification and validation, IEEE Std 1028 – reviews"
-          }
-        ],
-        quiz: {
-          id: "m5-q3",
-          title: "IEEE Standards Quiz",
-          description: "Test your understanding of IEEE software engineering standards",
-          passingScore: 70,
-          questions: [
-            {
-              id: "m5-q3-1",
-              text: "IEEE Std 1012 focuses on:",
-              options: [
-                "Verification and validation",
-                "Code formatting",
-                "Project management",
-                "User interface design"
-              ],
-              answer: 0,
-              marks: 1,
-              explanation: "IEEE Std 1012 focuses on verification and validation processes."
-            }
-          ]
-        }
+          { id: "m5-c3-m1", title: "IEEE Standards Overview", type: "PDF", url: "/uploads/ieee-standards.pdf", description: "IEEE software engineering standards" },
+          { id: "m5-c3-m2", title: "IEEE Std 12207", type: "PDF", url: "/uploads/ieee-12207.pdf", description: "IEEE/EIA Std 12207 – software life cycle processes" },
+          { id: "m5-c3-m3", title: "IEEE Std 1012 and 1028", type: "PDF", url: "/uploads/ieee-1012-1028.pdf", description: "IEEE Std 1012 – verification and validation, IEEE Std 1028 – reviews" },
+          // Student Submissions - IEEE & Chapter 24
+          { id: "m5-student-ieee-1", title: "Chapter 24.1 to 24.4 + Chapter 9.1 to 9.5", type: "LINK", url: "https://drive.google.com/drive/folders/1ABJTaUy2mcBHWBzh2rgETIliQlpOoSr1?usp=sharing", description: "Submitted by Prajwal Reddy R & team" },
+          { id: "m5-student-ieee-2", title: "Structure and Content of IEEE Software Engineering Standards", type: "LINK", url: "https://forms.gle/2LXcBB3ocKMrBTx17", description: "Submitted by Manasa S" },
+          { id: "m5-student-ieee-3", title: "24.1 - Structure and Content + 24.2", type: "LINK", url: "https://drive.google.com/drive/folders/1_aiKIONOIDKyFOfeG5A_Ne-6zCtdsbUp", description: "Submitted by Manoj Kumar VM & team" },
+          { id: "m5-student-ieee-1012", title: "IEEE Std 1012 - Verification and Validation", type: "LINK", url: "https://docs.google.com/presentation/d/1tsmOm9jKUaEvqtfCw2d2z5jaPwpBjiSP/edit?usp=drivesdk", description: "Submitted by Dheeraj B S" }
+        ]
       }
     ]
   }

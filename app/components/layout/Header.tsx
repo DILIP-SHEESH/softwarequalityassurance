@@ -11,8 +11,8 @@ export function Header() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/modules', label: 'Modules' },
-    { href: '/materials', label: 'Materials' },
+    // { href: '/modules', label: 'Modules' },
+    { href: '/student-materials', label: 'Materials' },
     { href: '/quizzes', label: 'Quizzes' },
   ];
 
@@ -49,22 +49,6 @@ export function Header() {
               </Link>
             ))}
           </nav>
-
-          {/* Desktop Buttons */}
-          <div className="hidden md:flex items-center gap-3">
-            <Link
-              href="/contributor/login"
-              className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition"
-            >
-              Contribute
-            </Link>
-            <Link
-              href="/admin/login"
-              className="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition"
-            >
-              Admin
-            </Link>
-          </div>
 
           {/* Mobile Menu Button */}
           <button

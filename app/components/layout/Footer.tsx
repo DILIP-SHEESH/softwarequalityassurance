@@ -55,22 +55,6 @@ export function Footer() {
               <Heart className="w-4 h-4 text-red-500 fill-red-500" />
               <span>by ISE Students</span>
             </div>
-
-            {/* Right: Links */}
-            <div className="flex items-center gap-6">
-              <Link 
-                href="/contributor/login" 
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                Contribute
-              </Link>
-              <Link 
-                href="/admin/login" 
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                Admin
-              </Link>
-            </div>
           </div>
         </div>
       </div>
