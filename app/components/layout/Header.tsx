@@ -78,23 +78,6 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-
-            <div className="border-t border-gray-200 pt-3 mt-3 space-y-2">
-              <Link
-                href="/contributor/login"
-                className="block text-center px-3 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contribute
-              </Link>
-              <Link
-                href="/admin/login"
-                className="block text-center px-3 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Admin
-              </Link>
-            </div>
           </nav>
         </div>
       )}
